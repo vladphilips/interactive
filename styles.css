@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
+
+
+body{
+	font-family: 'Arimo', sans-serif;
+}
+
+
+.header { grid-area: header;
+
+		
+}
+.menu { grid-area: menu;
+		line-height: 110%;
+	
+}
+.main { grid-area: main; 
+		padding-left: 25px;}
+.right { grid-area: right; }
+.footer { grid-area: footer; }
+
+.grid-container {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 20px;
+  background-color: white;
+  padding: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  padding-right: 30px;
+  }
+
+
+h1 {
+				font-family: 'Arimo', sans-serif;
+				font-weight: 400;
+				font-size: 36px;
+				line-height: 95%;
+				letter-spacing: -1px;
+			}
+
+h3 {
+				font-family: 'Arimo', sans-serif;
+				font-weight: 400;
+				font-size: 21px;
+					}
+
+
+/* LINKS */
+
+			a:link {
+			  color: #555555;
+				text-decoration: none;
+			}
+			a:active {
+			  color: #D9132D;
+					}
+			a:visited {
+			  color: #555555;
+			}
+			a:hover { 
+			  color: #D9132D;
+			  transition: .4s;
+			}
