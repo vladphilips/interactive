@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="icon" href="#" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="body" class="off">
+
+<div class="container">	
+	<button type="button" name="switch" onclick="toggleSwitch()" title="day/night">switch</button>
+	<div class="lum">
+	<div class="lumfly">
+		<div class="wings-lum">
+			<div class="hover-lum">
+			<div class="left wing"></div>
+			<div class="right wing"></div>
+			<div class="perspective"></div>
+			</div>
+		</div>
+
+		<div class="head"></div>
+
+
+		<div class="left eye">
+			<div class="pupil"></div>
+		</div>
+		<div class="right eye">
+			<div class="pupil"></div>
+		</div>
+		
+	</div>
+	</div>
+</div>
+	
+
+
+<!--	JavaScript    -->
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!--	MOUSE CLICK FOLLOWING   -->
+<script>
+	var lum = document.querySelector(".lum");
+	var container = document.querySelector(".container");
+
+	container.addEventListener("click", getClickPosition, false);
+	function getClickPosition (e){
+		var xPosition = e.clientX - (lum.offsetWidth / 3.4);
+		var yPosition = e.clientY;
+		
+		var translate3dValue = "translate3d(" + xPosition + "px," + yPosition + "px, 0)";
+		
+		lum.style.transform = translate3dValue;
+	}
+</script>
+	
+<!--
+EYES FOLLOWING THE CURSOR
+	implementation of JS was taken from here: https://codepen.io/Codewoofy/pen/VeBJEP
+-->
+	
+<script>
+	$(".container").mousemove(function(event) {
+	  var pupil = $(".pupil");
+	  var x = (pupil.offset().left) + (pupil.width() / 2);
+	  var y = (pupil.offset().top) + (pupil.height() / 2);
+	  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+	  var rot = (rad * (180 / Math.PI) * -1) + 180;
+	  pupil.css({
+		'-webkit-transform': 'rotate(' + rot + 'deg)',
+		'-moz-transform': 'rotate(' + rot + 'deg)',
+		'-ms-transform': 'rotate(' + rot + 'deg)',
+		'transform': 'rotate(' + rot + 'deg)'
+	  });
+	});
+	
+</script>
+
+<!--	DAY/NIGHT SWITCH  -->
+	
+<script>
+	function toggleSwitch() {
+	  var body = document.getElementById("body");
+	  var currentClass = body.className;
+	  body.className = currentClass == "off" ? "on" : "off";
+	}
+</script>
+	
+</body>
+</html>
