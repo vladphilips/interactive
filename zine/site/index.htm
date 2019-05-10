@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Zine</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">
+		<a href="about.html">
+		<div class="about">
+		  	<img id="menuimg" src="images/menu_icon.png" alt="menu" height="30px"/>
+			  About
+		</div>
+		</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="horizon scroll">
+
+  </div>
+
+  <div class="middle scroll">
+
+  </div>
+
+  <div class="front scroll">
+	  <div class="title page">
+	  <h1>In a Hurry to <br> God’s Reception </h1>
+	  </div>
+
+    <div class="videoback">
+<!--      <img src="images/f1german.jpg">-->
+<!--
+<video playsinline autoplay muted loop poster="images/f1german.jpg" id="bgvideo" width="x" height="y">
+<source src="images/nfsvideo.mp4" type="video/mp4">
+</video>
+-->
+  <video playsinline autoplay muted loop poster width="x" height="y">
+  <source src="images/introvideo.mp4" type="video/mp4">
+  </video>
+		
+    </div>
+	  
+<!--
+    <div class="maintext1 page">
+      <h2>A corner is anytime a car has to deviate from straight.</h2>
+      <p>
+		There are many corners out there that are famous, there are a lot more that are infamous because they claimed so many cars and drivers.<br><br>
+		Whether it is a sharp corner a wide sweeper or a banking turn. A lot of them don’t have big grassy fields to go sliding around on. A lot of them have a big concrete wall. It’s got gouges in it, it’s go scrapes, marks, chunks of concrete missing. That’s where all the carnage happens. Because <br>
+		it is always a battle to get to the corner and get through the corner. Nobody wants to give up their advantage. But bottom line, one guys <br>
+		has to. 
+      </p>
+    </div>
+-->
+	  
+    <div class="subtitle1 page">
+      <h4>Drifting</h4>
+	</div>
+	  
+	<div class="maintext2 page">
+      <p>
+		"This is how you drive in Petersburg. I mean, how can you not drift here? Who needs a race track? This is a pure euphoria." <br>
+		<br>
+		<i>– Leader of Evil Empire, <br>
+		St. Petersburg street racing club</i>
+      </p>
+    </div>
+	  
+	<div class="maintext3 page">
+      <p>
+		"Checkers" is a slang word for driving aggressively in a traffic, usually maintaining  <br>
+		high speed on a motorway and overtaking <br>
+		other cars by a narrow margin without using <br>
+		turning signals.  
+      </p>
+    </div>
+	  
+	<div class="maintext4 page">
+      <p>
+		“Three months after he bought the car, the engine blew up. We looked at the logs. <br>
+		He was doing 340 km/h.” <i>– dealership mechanic</i>
+      </p>
+    </div>
+
+    <div class="quote1 page">
+      <h2>"When my car smells like it’s 
+		going to break, that means I’m
+		pushing it to it’s limit."</h2>
+	</div>
+	  
+   <div class="quote2 page">
+      <h2>“Policemen simply know my car. They never stop me.”</h2>
+	</div>
+	  
+   <div class="quote3 page">
+      <h2>“The closer to death I am – the more alive I feel.”</h2>
+	</div>
+	  
+	<div class="image01 page">
+      <p>
+		<img id="cimg1" src="images/still47.jpg" alt="drift1" height="500px"/>
+	    </p>
+	</div>
+	  
+	<div class="image02 page">
+      <p>
+		<img id="cimg2" src="images/still40.jpg" alt="drift2" height="500px"/>
+	    </p>
+	</div>
+	  
+	<div class="image03 page">
+      <p>
+		<img id="cimg3" src="images/still493.jpg" alt="drift3" height="500px"/>
+	    </p>
+	</div>
+	  
+    <div class="subtitle2 page">
+      <h4>Checkers</h4>
+	</div>
+	  
+	<div class="image04 page">
+      <p>
+		<img id="cimg4" src="images/Still1.jpg" alt="draughts1" height="500px"/>
+	    </p>
+	</div>
+	  
+	<div class="image05 page">
+      <p>
+		<img id="cimg5" src="images/Still7.jpg" alt="draughts2" height="500px"/>
+	    </p>
+	</div>
+	  
+    <div class="subtitle3 page">
+      <h4>Racing</h4>
+	</div>
+	  
+	<div class="image06 page">
+      <p>
+		<img id="cimg6" src="images/lambo101.jpg" alt="racing1" height="500px"/>
+	    </p>
+	</div>
+	  
+	<div class="image07 page">
+      <p>
+		<img id="cimg7" src="images/lambo501.jpg" alt="racing2" height="500px"/>
+	    </p>
+	</div>
+	
+	<a href="index.htm">
+	  <div class="back page">
+		
+		<img src="images/back.png" alt="back" height="40px"/>
+		Back
+	  </div>
+	</a>
+
+
+
+    </div>
+<!--
+  </div>
+</div>
+-->
+	
+	
+<!--============================= JAVASCRIPT ======================================-->
+	
+<!--JavaScript Horizontal Scroll-->
+	
+	<script type="text/javascript" src="../libs/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+			width: 'auto',	// Page width (auto or int value)
+			height: 'auto',	// Page height (the shorter, the faster the scroll)
+//            height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+
+        $(window).resize(function() {
+          if ($(window).width() <= 768) {
+            elem.destroy();
+          }
+          else {
+            elem.reinitialize();
+          }
+        });
+    }(jQuery));
+    </script>
+	
+	
+<!--BW Video Position-->
+	
+	<script type="text/javascript">
+	$(window).bind('scroll', function() {
+     if ($(window).scrollLeft() > 400) {
+          document.getElementById("#videoback").style.left = "0";
+     }
+     else {
+         document.getElementById("#videoback").style.left = "-300px";
+     }
+    });
+	</script>
+	
+<!--Title Animation-->
+	
+	<script>
+		
+		$(function(){
+		$('.title').data('size','big');
+		});
+		
+		window.addEventListener('scroll', () => {
+			const scrolled = window.scrollY;
+		
+			if (scrolled > 400)
+				{
+				if($('.title').data('size') == 'big')
+				{
+					$('.title').data('size','small');
+					$('.title').stop().animate({
+						left: '-600px'
+					},600);
+				}
+			}
+			else
+			{
+				if($('.title').data('size') == 'small')
+				{
+					$('.title').data('size','big');
+					$('.title').stop().animate({
+						left: '360px'
+					},600);
+				}  
+			}
+		});
+	</script>
+	
+	
+<!--Subtitle1 Animation-->
+	
+	<script>
+		
+		$(function(){
+		$('.subtitle1').data('sizes1','bigs1');
+		});
+		
+		window.addEventListener('scroll', () => {
+			const scrolled = window.scrollY;
+		
+			if (scrolled > 1200)
+				{
+				if($('.subtitle1').data('sizes1') == 'bigs1')
+				{
+					$('.subtitle1').data('sizes1','smalls1');
+					$('.subtitle1').stop().animate({
+						left: '-600px'
+					},600);
+				}
+			}
+			else
+			{
+				if($('.subtitle1').data('sizes1') == 'smalls1')
+				{
+					$('.subtitle1').data('sizes1','bigs1');
+					$('.subtitle1').stop().animate({
+						left: '1700px'
+					},600);
+				}  
+			}
+		});
+	</script>
+	
+<!--Subtitle2 Animation-->
+	
+	<script>
+		
+		$(function(){
+		$('.subtitle2').data('sizes2','bigs2');
+		});
+		
+		window.addEventListener('scroll', () => {
+			const scrolled = window.scrollY;
+		
+			if (scrolled > 4700)
+				{
+				if($('.subtitle2').data('sizes2') == 'bigs2')
+				{
+					$('.subtitle2').data('sizes2','smalls2');
+					$('.subtitle2').stop().animate({
+						left: '2000px'
+					},600);
+				}
+			}
+			else
+			{
+				if($('.subtitle2').data('sizes2') == 'smalls2')
+				{
+					$('.subtitle2').data('sizes2','bigs2');
+					$('.subtitle2').stop().animate({
+						left: '4900px'
+					},600);
+				}  
+			}
+		});
+	</script>
+	
+<!--Subtitle3 Animation-->
+	
+	<script>
+		
+		$(function(){
+		$('.subtitle3').data('sizes3','bigs3');
+		});
+		
+		window.addEventListener('scroll', () => {
+			const scrolled = window.scrollY;
+		
+			if (scrolled > 7300)
+				{
+				if($('.subtitle3').data('sizes3') == 'bigs3')
+				{
+					$('.subtitle3').data('sizes3','smalls3');
+					$('.subtitle3').stop().animate({
+						left: '4000px'
+					},600);
+				}
+			}
+			else
+			{
+				if($('.subtitle3').data('sizes3') == 'smalls3')
+				{
+					$('.subtitle3').data('sizes3','bigs3');
+					$('.subtitle3').stop().animate({
+						left: '7350px'
+					},600);
+				}  
+			}
+		});
+	</script>
+	
+<!--image01 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 1600)
+	{
+		$('#cimg1').attr("src","images/still47.jpg");
+    };
+	if (scrolled > 1700)
+	{
+		$('#cimg1').attr("src","images/still48.jpg");
+    };
+    if (scrolled > 1800)
+	{
+		$('#cimg1').attr("src","images/still49.jpg");
+    };
+	    if (scrolled > 1900)
+	{
+		$('#cimg1').attr("src","images/still491.jpg");
+    };
+	    if (scrolled > 2000)
+	{
+		$('#cimg1').attr("src","images/still492.jpg");
+    };
+  
+});
+	</script>
+	
+	
+<!--image02 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 2300)
+	{
+		$('#cimg2').attr("src","images/still40.jpg");
+    };
+	if (scrolled > 2400)
+	{
+		$('#cimg2').attr("src","images/still41.jpg");
+    };
+    if (scrolled > 2500)
+	{
+		$('#cimg2').attr("src","images/still42.jpg");
+    };
+	    if (scrolled > 2600)
+	{
+		$('#cimg2').attr("src","images/still43.jpg");
+    };
+	    if (scrolled > 2700)
+	{
+		$('#cimg2').attr("src","images/still44.jpg");
+    };
+		if (scrolled > 2800)
+	{
+		$('#cimg2').attr("src","images/still45.jpg");
+    };
+		if (scrolled > 2900)
+	{
+		$('#cimg2').attr("src","images/still46.jpg");
+    };
+  
+});
+	</script>
+	
+<!--image03 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 3200)
+	{
+		$('#cimg3').attr("src","images/still493.jpg");
+    };
+	if (scrolled > 3300)
+	{
+		$('#cimg3').attr("src","images/still494.jpg");
+    };
+    if (scrolled > 3400)
+	{
+		$('#cimg3').attr("src","images/still495.jpg");
+    };
+	    if (scrolled > 3500)
+	{
+		$('#cimg3').attr("src","images/still496.jpg");
+    };
+	    if (scrolled > 3600)
+	{
+		$('#cimg3').attr("src","images/still497.jpg");
+    };
+		if (scrolled > 3700)
+	{
+		$('#cimg3').attr("src","images/still498.jpg");
+    };
+		if (scrolled > 3800)
+	{
+		$('#cimg3').attr("src","images/still499.jpg");
+    };
+  
+});
+	</script>
+	
+	
+<!--image04 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 4900)
+	{
+		$('#cimg4').attr("src","images/Still1.jpg");
+    };
+	if (scrolled > 5000)
+	{
+		$('#cimg4').attr("src","images/Still2.jpg");
+    };
+    if (scrolled > 5100)
+	{
+		$('#cimg4').attr("src","images/Still3.jpg");
+    };
+	    if (scrolled > 5200)
+	{
+		$('#cimg4').attr("src","images/Still4.jpg");
+    };
+	    if (scrolled > 5300)
+	{
+		$('#cimg4').attr("src","images/Still5.jpg");
+    };
+		if (scrolled > 5400)
+	{
+		$('#cimg4').attr("src","images/Still6.jpg");
+    };
+		if (scrolled > 5500)
+	{
+		$('#cimg4').attr("src","images/Still7.jpg");
+    };
+  
+});
+	</script>
+	
+<!--image05 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 5700)
+	{
+		$('#cimg5').attr("src","images/Still7.jpg");
+    };
+	if (scrolled > 5800)
+	{
+		$('#cimg5').attr("src","images/Still8.jpg");
+    };
+    if (scrolled > 5900)
+	{
+		$('#cimg5').attr("src","images/Still9.jpg");
+    };
+	    if (scrolled > 6000)
+	{
+		$('#cimg5').attr("src","images/Still10.jpg");
+    };
+	    if (scrolled > 6100)
+	{
+		$('#cimg5').attr("src","images/Still11.jpg");
+    };
+		if (scrolled > 6200)
+	{
+		$('#cimg5').attr("src","images/Still12.jpg");
+    };
+		if (scrolled > 6300)
+	{
+		$('#cimg5').attr("src","images/Still13.jpg");
+    };
+  
+});
+	</script>
+	
+<!--image06 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 7200)
+	{
+		$('#cimg6').attr("src","images/lambo101.jpg");
+    };
+	if (scrolled > 7300)
+	{
+		$('#cimg6').attr("src","images/lambo102.jpg");
+    };
+    if (scrolled > 7400)
+	{
+		$('#cimg6').attr("src","images/lambo103.jpg");
+    };
+	    if (scrolled > 7500)
+	{
+		$('#cimg6').attr("src","images/lambo104.jpg");
+    };
+	    if (scrolled > 7700)
+	{
+		$('#cimg6').attr("src","images/lambo105.jpg");
+    };
+		if (scrolled > 7600)
+	{
+		$('#cimg6').attr("src","images/lambo201.jpg");
+    };
+		if (scrolled > 7700)
+	{
+		$('#cimg6').attr("src","images/lambo202.jpg");
+    };
+		if (scrolled > 7800)
+	{
+		$('#cimg6').attr("src","images/lambo203.jpg");
+    };
+		if (scrolled > 7900)
+	{
+		$('#cimg6').attr("src","images/lambo204.jpg");
+    };
+		if (scrolled > 8000)
+	{
+		$('#cimg6').attr("src","images/lambo205.jpg");
+    };
+  
+});
+	</script>
+	
+<!--image07 Change-->
+	
+	<script>
+window.addEventListener('scroll', () => {
+const scrolled = window.scrollY;
+		
+    if (scrolled < 8000)
+	{
+		$('#cimg7').attr("src","images/lambo502.jpg");
+    };
+	if (scrolled > 8100)
+	{
+		$('#cimg7').attr("src","images/lambo503.jpg");
+    };
+	    if (scrolled > 8200)
+	{
+		$('#cimg7').attr("src","images/lambo504.jpg");
+    };
+	    if (scrolled > 8300)
+	{
+		$('#cimg7').attr("src","images/lambo506.jpg");
+    };
+		if (scrolled > 8400)
+	{
+		$('#cimg7').attr("src","images/lambo507.jpg");
+    };
+		if (scrolled > 8500)
+	{
+		$('#cimg7').attr("src","images/lambo508.jpg");
+    };
+		if (scrolled > 8600)
+	{
+		$('#cimg7').attr("src","images/lambo509.jpg");
+    };
+		if (scrolled > 8700)
+	{
+		$('#cimg7').attr("src","images/lambo510.jpg");
+    };
+		if (scrolled > 8800)
+	{
+		$('#cimg7').attr("src","images/lambo511.jpg");
+    };
+		if (scrolled > 8900)
+	{
+		$('#cimg7').attr("src","images/lambo512.jpg");
+    };
+  
+});
+	</script>
+	
+	
+	
+<!--quote1 Animation-->
+	
+	<script>
+		
+//		$(function(){
+//		$('.quote1').data('sizeq1','bigq1');
+//		});
+//		
+//		window.addEventListener('scroll', () => {
+//			const scrolled = window.scrollY;
+//		
+//			if (scrolled > 2000)
+//				{
+//				if($('.quote1').data('sizeq1') == 'bigq1')
+//				{
+//					$('.quote1').data('sizeq1','smallq1');
+//					$('.quote1').stop().animate({
+//						left: '1700px'
+//					},2000);
+//				}
+//			}
+//			else
+//			{
+//				if($('.title').data('sizeq1') == 'smallq1')
+//				{
+//					$('.title').data('sizeq1','bigq1');
+//					$('.title').stop().animate({
+//						left: '2000px'
+//					},2000);
+//				}  
+//			}
+//		});
+	</script>
+	
+	
+		<script>
+		
+//		$(function(){
+//		$('#cimg1').data('size','big');
+//		});
+//		
+//		window.addEventListener('scroll', () => {
+//			const scrolled = window.scrollY;
+//		
+//			if (scrolled > 800)
+//				{
+//				if($('#cimg1').data('size') == 'big')
+//				{
+//					$('#cimg1').data('size','small');
+//					$('#cimg1').stop().animate({
+//						left: '-200px'
+//					},1000);
+//				}
+//			}
+//			else
+//			{
+//				if($('#cimg1').data('size') == 'small')
+//				{
+//					$('#cimg1').data('size','big');
+//					$('#cimg1').stop().animate({
+//						left: '310px'
+//					},1000);
+//				}  
+//			}
+//		});
+	</script>
+	
+</body>
+</html>

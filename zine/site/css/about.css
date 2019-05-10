@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700');
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #F0F0F0;
+	background: black;
+	max-height: 100%
+}
+
+
+
+h1{
+	color: #F8F7F5;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	font-kerning: auto;
+	letter-spacing: -2px;
+	font-size: 48px;
+	line-height: 0.95em;
+}
+
+.header{
+	position: absolute;
+	top: 3%;
+	left: 2%;
+	max-height: 5%;
+	max-width: 5%;
+}
+
+.title{
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	width: 30%;
+	max-height: 100%
+}
+
+.maintext{
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	width: 30%;
+	max-height: 100%
+}
+
+.cover{
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	width: 50%;
+	height: 40%;
+	transition: filter .5s ease-in-out;
+  	-webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  	filter: grayscale(100%); /* FF 35+ */
+}
+
+.cover:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+
